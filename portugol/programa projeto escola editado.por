@@ -106,16 +106,16 @@ programa
 
 
 
-		//Ensino Mﾃｩdio (vinicius)
-		 	
-		se(codigo==2){
+		//Ensino Mﾃｩdio (vinicius)	
+			
+			limpa()
+			se(codigo==2){
 			escreva("ESCOLA ENSINO MEDIO GREYS\n")
-			escreva("A JORNADA COMECA AQUI\n")
+			escreva("SEU FUTURO É AQUI !!!\n")
 			escreva("\n")
-			escreva("ENSINO MEDIO\n")
-			escreva("\n")		
-		
-		
+			escreva("MEDIO\n")
+			escreva("\n")
+
 			escreva("Matricula: ")
 			leia(matricula)
 			escreva("\nCPF: ")
@@ -123,8 +123,6 @@ programa
 			escreva("\nStatus digite 1-Ativo (verdadeiro) ou 2-Inativo (falso) : ")
 			leia(status)
 			escreva("\n")
-				
-			limpa()
 
 			
 			
@@ -158,9 +156,6 @@ programa
 					
 			}
 			}
-		
-
-
 
 //fim
 
@@ -412,7 +407,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3048; 
+ * @POSICAO-CURSOR = 3027; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
