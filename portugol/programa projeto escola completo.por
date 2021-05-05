@@ -16,7 +16,7 @@ programa
 		caracter boletimImpressao 
 		boletimImpressao = 'N'
 		inteiro numeroImpressaolimite = 3
-		inteiro numeroImpressaoAtual = 0
+		caracter numeroImpressaoAtual 
 		real tiraNota=0.0
 		caracter continuar
 		inteiro x = 0
@@ -25,6 +25,8 @@ programa
  		real totalAtual = 0.0
        	real creditoMestrado = 0.0
         	real creditoMestradoAtual = 10.0
+        	inteiro tamanho=3
+       
 		
 		
 
@@ -32,121 +34,167 @@ programa
 		escreva("ESCOLA SND\n")
 		escreva("SLOGAN")
 		escreva("\n")
-		escreva("1-Bﾃ！CO\n")
-		escreva("2-Mﾃ迂O\n")
-		escreva("3-GRADUAﾃ�ﾃグ\n")
-		escreva("4-Pﾃ鉄\n")
+		escreva("1-BASICO\n")
+		escreva("2-MEDIO\n")
+		escreva("3-GRADUACAO\n")
+		escreva("4-POS\n")
 		escreva("5-MESTRADO\n")
 		escreva("6-SAIR\n")
-		escreva
 
 
 		//cﾃｳdigo da operaﾃｧﾃ｣o desejada
-		escreva("DIGITE O Cﾃ泥IGO DA OPERAﾃ�ﾃグ: ")
+		escreva("DIGITE O CODIGO DA OPERACAO: ")
 		leia(codigo)
 
 
 
 		//Ensino Bﾃ｡sico (Dafhne)
-		se(codigo==1){
-			escreva("ESCOLINHA ENSINO BﾃヾICO ALEGRIA\n")
-			escreva("A JORNADA COMEﾃ�A AQUI\n")
+		logico dataNascimento = verdadeiro
+
+	limpa()
+			se(codigo==1){
+			escreva("ESCOLA ALEGRIA PROGRAMA\n")
+			escreva("SEU FUTURO AQUI !!!\n")
 			escreva("\n")
-			escreva("ENSINO BﾃヾICO\n")
+			escreva("BASICO\n")
 			escreva("\n")
-			
-			escreva("Matrﾃｭcula: ")
+
+			escreva("Matricula: ")
 			leia(matricula)
 			escreva("\nCPF: ")
 			leia(cpf)
-			escreva("\nStatus(1-Ativo 2-Inativo): ")
+			escreva("\nStatus digite 1-Ativo (verdadeiro) ou 2-Inativo (falso) : ")
 			leia(status)
 			escreva("\n")
-			}
+			
+                               
+			para (inteiro n=0; n<tamanho; n++){
+               	escreva ("\n")
+				escreva("\nMOVIMENTOS (I-inclusão de nota ou R-retirada nota) : ")
+				leia(movimento)
+					
+				escreva("\nDigite a nota que deseja incluir ou excluir: ")
+				leia(pontos[x])
+				escreva ("\n")	
+					se(pontos[x] > 0){
+						
+						se(movimento=='I'){
+							total = pontos[x] + total
+							}
+				
+						senao{
+						total= total - pontos[x]
+						}		
+				
+					}
+
+         		
+					escreva ("O valor total é: " , total)
+					
+				}
+					escreva ("\nHoje é seu aniversario? ")
+					leia (dataNascimento)
+
+
+				se (dataNascimento){
+					total=total*0.1+total}
+		
+					escreva ("O valor total é: " , total)
+	
+	
+}
+
 
 
 		//Ensino Mﾃｩdio (vinicius)
-		/*se(codigo==2){
-			escreva("ESCOLA ENSINO Mﾃ吋IO GREYS\n")
-			escreva("A JORNADA COMEﾃ�A AQUI\n")
+		 	
+		se(codigo==2){
+			escreva("ESCOLA ENSINO MEDIO GREYS\n")
+			escreva("A JORNADA COMECA AQUI\n")
 			escreva("\n")
-			escreva("ENSINO Mﾃ吋IO\n")
+			escreva("ENSINO MEDIO\n")
 			escreva("\n")
 			
-			escreva("Matrﾃｭcula: ")
+			escreva("Matricula: ")
 			leia(matricula)
 			escreva("\nCPF: ")
 			leia(cpf)
-			escreva("\nStatus(1-Ativo 2-Inativo): ")
+			escreva("\nStatus(1-Ativo 2-Inativo: ")
 			leia(status)
 			escreva("\n")
+		
 			
+			limpa()
+			se(codigo==2){
+			escreva("ESCOLA ALEGRIA PROGRAMA\n")
+			escreva("SEU FUTURO É AQUI !!!\n")
+			escreva("\n")
+			escreva("MEDIO\n")
+			escreva("\n")
+
+			escreva("Matricula: ")
+			leia(matricula)
+			escreva("\nCPF: ")
+			leia(cpf)
+			escreva("\nStatus digite 1-Ativo (verdadeiro) ou 2-Inativo (falso) : ")
+			leia(status)
+			escreva("\n")
+
+			
+			
+			para (inteiro n=0; n<tamanho; n++){
+               	escreva ("\n")
+				escreva("\n (Inclua sua nota: ")
+				leia(movimento)
+					
+				escreva ("\n")
+				escreva("\nMOVIMENTOS (I-Continuar ou R-Para) : ")
+				leia(movimento)
+
+				se(movimento=='I'){
+					escreva ("Digite a nota que você quer incluir:  " )
+					leia(pontos[x])
+					escreva ("\n")	
+				}
+
+					total = pontos[x] + total 
+					escreva (total)
+
+					
+					
+					se(movimento=='R'){
+						escreva ("Imprimindo seu boletim...")
+						escreva ("\n")
+						escreva ("seu boletim é:" , total)
+										
+					}
+
+					
 			}
-
-			para(inteiro m=0; m<3; m++){
-				escreva("Qual a sua nota atual: ")
-				leia(pontos [m])
-				
-				enquanto (parar!='S'){
-					escreva("Deseja continuar adicionando nota? (S/N?)")
-					leia(parar)
-					total = total+pontos[m]
 			}
-			//se(numeroImpressaolimite ){
-				//escreva("Deseja imprimir o boletim? ")
-				//leia()
-			}
- */
+		}
 
-		//Graduaﾃｧﾃ｣o (--brunﾃ｣o--)
-            se(codigo==3){
-            escreva("ESCOLA GRADUﾃ�ﾃグ TOPZERA\n")
-            escreva("A JORNADA ACABA AQUI EXTREME!!\n")
-            escreva("\n")
-            escreva("GRADUAﾃ�ﾃグ\n")
-            escreva("\n")
-            
-            escreva("Matricula: ")
-            leia(matricula)
-            escreva("\nCPF: ")
-            leia(cpf)
-            escreva("\nStatus(1-Ativo 0-Inativo): ")
-            leia(status)
-            escreva("\n")
-            
-            
-            /* 
-             *  Usar o  bonus no media  se no momento do movimento 
-             *  a media  fica negativa,
-              ajusta na m�ｾ�ｽｩdia e diminuir no bonus 
-              ( valor maximo de 2 pontos de bonus)
-             */
-                        
-                para (inteiro n=0; n<3; n++){
-                    
-                    escreva ("\nDigite o valor da  nota: " )
-                    leia (pontos[n])
 
-                    totalAtual= totalAtual+pontos[n]
-                          
-                   
-            }
-            //nﾃ｣o pode ficar negativo ﾃｩ assim ?
-            se (totalAtual<0){
-                        totalAtual+=2
-                    }
-            escreva ("O valor total ﾃｩ : " , totalAtual)
-    }
 
+//fim
 
 
 					//Pﾃｳs Graduaﾃｧﾃ｣o (--jessica--)
 		se(codigo==4){
-			escreva("Pﾃ鉄 GRADUAﾃ�ﾃグ ALEGRIA DE PROGRAMAR\n")
-			escreva("VOCﾃ� EVOLUINDO SEMPRE!\n")
+			escreva("POS-GRADUAÇÃO UNI10\n")
+			escreva("SEU FUTURO É AQUI !!!\n")
 			escreva("\n")
-			escreva("Pﾃ鉄 GRADUAﾃ�ﾃグ\n")
+			escreva("POS-GRADUAÇÃO\n")
 			escreva("\n")
+
+			escreva("Matricula: ")
+			leia(matricula)
+			escreva("\nCPF: ")
+			leia(cpf)
+			escreva("\nStatus digite 1-Ativo (verdadeiro) ou 2-Inativo (falso) : ")
+			leia(status)
+			escreva("\n")
+			
 
 			faca{
 				escreva("Pontos totais atual: ", total)
@@ -204,7 +252,7 @@ programa
 				x++
 				escreva("Continuar S/N?: ")
 				leia(continuar)
-				}enquanto(x<3 ou continuar!='N')
+				}enquanto(x<3 e continuar!='N')
 				escreva("Movimentos finalizados!\n")
 					
 					se(creditoPos>0){
@@ -221,6 +269,7 @@ programa
 					escreva("\nTotal de pontos: ",total)
 				
 		}
+		
 					//Pﾃｳs Graduaﾃｧﾃ｣o (--jessica--)
 
 
@@ -300,7 +349,7 @@ programa
 			escreva ("Continuar S/N?: ")
 			leia(continuar)
 			
-			}enquanto (x<3 ou continuar!='N')
+			}enquanto (x<3 e continuar!='N')
 			escreva ("\nFim dos Movimentos!")
 
 				se(creditoMestrado>0){
@@ -320,17 +369,17 @@ programa
 		
 			}
 		}
-	}
-
 	
 
+	
+}
 
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 778; 
+ * @POSICAO-CURSOR = 3347; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
