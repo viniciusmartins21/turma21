@@ -113,25 +113,9 @@ programa
 			escreva("A JORNADA COMECA AQUI\n")
 			escreva("\n")
 			escreva("ENSINO MEDIO\n")
-			escreva("\n")
-			
-			escreva("Matricula: ")
-			leia(matricula)
-			escreva("\nCPF: ")
-			leia(cpf)
-			escreva("\nStatus(1-Ativo 2-Inativo: ")
-			leia(status)
-			escreva("\n")
+			escreva("\n")		
 		
-			
-			limpa()
-			se(codigo==2){
-			escreva("ESCOLA ALEGRIA PROGRAMA\n")
-			escreva("SEU FUTURO É AQUI !!!\n")
-			escreva("\n")
-			escreva("MEDIO\n")
-			escreva("\n")
-
+		
 			escreva("Matricula: ")
 			leia(matricula)
 			escreva("\nCPF: ")
@@ -139,6 +123,8 @@ programa
 			escreva("\nStatus digite 1-Ativo (verdadeiro) ou 2-Inativo (falso) : ")
 			leia(status)
 			escreva("\n")
+				
+			limpa()
 
 			
 			
@@ -172,11 +158,58 @@ programa
 					
 			}
 			}
-		}
+		
 
 
 
 //fim
+
+		
+			se(codigo==3){
+			escreva("ESCOLA ALEGRIA PROGRAMA\n")
+			escreva("SEU FUTURO AQUI !!!\n")
+			escreva("\n")
+			escreva("GRADUACAO\n")
+			escreva("\n")
+
+			escreva("Matricula: ")
+			leia(matricula)
+			escreva("\nCPF: ")
+			leia(cpf)
+			escreva("\nStatus digite 1-Ativo (verdadeiro) ou 2-Inativo (falso) : ")
+			leia(status)
+			escreva("\n")
+			}
+                               
+			para (inteiro n=0; n<tamanho; n++){
+               	escreva ("\n")
+				escreva("\nMOVIMENTOS (I-inclusão de nota ou R-retirada nota) : ")
+				leia(movimento)
+					
+				escreva("\nDigite a nota que deseja incluir ou excluir: ")
+				leia(pontos[x])
+				escreva ("\n")	
+					se(pontos[x] > 0){
+						
+						se(movimento=='I'){
+							total = pontos[x] + total
+							}
+				
+						senao{
+						total= total - pontos[x]
+						}		
+				
+					}
+
+         		
+					escreva ("O valor total é: " , total)
+				}
+
+				se (total<0){
+				total+=2}
+		
+					escreva ("O valor total é: " , total)
+
 
 
 					//Pﾃｳs Graduaﾃｧﾃ｣o (--jessica--)
@@ -379,7 +412,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3347; 
+ * @POSICAO-CURSOR = 3048; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
